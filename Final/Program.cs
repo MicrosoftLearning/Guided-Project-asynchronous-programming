@@ -178,7 +178,7 @@ do
                         // only search if there is a term to search for
                         if (term != null && term.Trim() != "")
                         {
-                            for (int j = 2; j > -1 ; j--)//
+                            for (int j = 2; j > -1 ; j--)
                             {
                                 // #5 update "searching" message to show countdown
                                 foreach (string icon in searchingIcons)
