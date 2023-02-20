@@ -150,6 +150,12 @@ do
             }
 
             string[] dogSearches = dogCharacteristics.Split(",");
+            // trim leading and trailing spaces from each search term
+            for (int i = 0; i < dogSearches.Length; i++)
+            {
+                dogSearches[i] = dogSearches[i].Trim();
+            }
+
             Array.Sort(dogSearches);
             // #4 update to "rotating" animation with countdown
             string[] searchingIcons = {" |", " /", "--", " \\", " *"};
@@ -172,7 +178,7 @@ do
                         // only search if there is a term to search for
                         if (term != null && term.Trim() != "")
                         {
-                            for (int j = 2; j > -1 ; j--)
+                            for (int j = 2; j > -1 ; j--)//
                             {
                                 // #5 update "searching" message to show countdown
                                 foreach (string icon in searchingIcons)
